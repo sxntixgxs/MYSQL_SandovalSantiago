@@ -56,7 +56,7 @@ CREATE TABLE curso_escolar(
 CREATE TABLE alumno_matricula_asignatura(
     id_alumno INT(10),
     id_asignatura INT(10),
-    id_curso_escolar INT(10)
+    id_curso_escolar INT(10),
     FOREIGN KEY (id_asignatura) REFERENCES asignatura(id),
     FOREIGN KEY(id_curso_escolar) REFERENCES curso_escolar(id)
 );
