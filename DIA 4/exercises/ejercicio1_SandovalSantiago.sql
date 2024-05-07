@@ -109,3 +109,29 @@ SELECT * FROM pais;
 SELECT * FROM ciudad;
 
 SELECT * FROM idioma;
+
+-- Consulta de tipo inner join para obtener las ciudades
+-- que estan especificamente asignadas a un pais
+
+SELECT P.nombre AS NombrePais, C.nombre AS NombreCiudad
+FROM pais AS P
+INNER JOIN ciudad AS C ON P.id = C.id_pais;
+
+-- Consulta de tipo LEFT JOIN para obtener todas las ciudades
+-- junto con su pais, incluso si alguna ciudad no esta asignada
+-- a esta msima
+
+SELECT P.nombre AS NombrePais, C.nombre AS NombreCiudad
+FROM pais AS P
+LEFT JOIN ciudad AS C ON P.id = C.id_pais;
+
+-- UNION ES QUITAR EL PUNTO Y COMA Y HACER LOS DOS SELECTS R Y L
+
+SELECT P.nombre AS NombrePais, C.nombre AS NombreCiudad
+FROM pais AS P
+LEFT JOIN ciudad AS C ON P.id = C.id_pais
+UNION
+
+SELECT P.nombre AS NombrePais, C.nombre AS NombreCiudad
+FROM pais AS P
+RIGHT JOIN ciudad AS C ON P.id = C.id_pais;
