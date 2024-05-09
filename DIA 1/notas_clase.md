@@ -17,7 +17,7 @@
     + 3306 MYSQL **también es un motor / servicio que usa un puerto**
 
 
-
++ **Borrar config VSCode** code --list-extensions | xargs -L 1 code --uninstall-extension
 + Instalación MYSQL por máquina virtual
     + IP: 172.16.101.140
     + ssh p4student@172.16.101.140
