@@ -1,0 +1,1 @@
++ Crear 2 tablas -empleado y depto- de las cuales realizar las consultas propuestas.
